@@ -9,7 +9,6 @@ const LOOKUP_TABLE = [
 ];
 const PADDING_CHAR = "=";
 const PADDING_CHAR_REGEX = new RegExp(PADDING_CHAR, "g");
-const POSSIBLE_PADDINGS = [6, 4, 3, 1, 0];
 
 export function encode(arr: Uint8Array): string {
   const bits = new Bitstring(arr);
