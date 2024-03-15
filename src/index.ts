@@ -31,7 +31,6 @@ export function encode(arr: Uint8Array): string {
 export function decode(str: string): Uint8Array {
   const string = str.replace(PADDING_CHAR_REGEX, "");
   const length = string.length;
-  console.log("HI", string);
   const bits = new Bitstring(new Uint8Array(Math.floor((length * 5) / 8)));
   for (let i = 0; i < length; i++) {
     const index = LOOKUP_TABLE.indexOf(string[i]);
